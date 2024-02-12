@@ -66,6 +66,10 @@ add A > B ! `heat`
 ```
 是正确的。
 
+### 运行程序
+
+使用 `java -jar chemistryinferrer.jar <推断题文件>` 开始推断；如需查看调试信息，可使用 `-d/--debug` 参数。
+
 ---
 
 ### 编写 reactions.txt
