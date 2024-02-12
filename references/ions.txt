@@ -1,0 +1,23 @@
+// ¸ñÊ½Àý£º{(H)+}   ~   HCl   H2SO4
+
+{(H)+}    ~   HCl H2SO4 HNO3
+{(OH)-}   ~   Ca(OH)2   NaOH KOH Ba(OH)2
+
+{(NO3)-}     ~   HNO3   Ca(NO3)2 Fe(NO3)3 CuNO3   AgNO3      Ba(NO3)2  Mg(NO3)2 Zn(NO3)2 Fe(NO3)2 Al(NO3)3 NaNO3 KNO3  NH4NO3
+{(Cl)-}      ~   HCl    ZnCl2    MgCl2    FeCl2    AlCl3     CaCl2     FeCl3    CuCl2    BaCl2    NaCl     KCl   NH4Cl
+{(SO4)2-}    ~   H2SO4  ZnSO4    MgSO4    FeSO4    Al2(SO4)3 Fe2(SO4)3 CuSO4    Na2SO4
+{(CO3)2-}    ~   Na2CO3 K2CO3
+{(HCO3)2-}   ~   NaHCO3
+
+{(Zn)2+}   ~   ZnCl2   ZnSO4     Zn(NO3)2
+{(Mg)2+}   ~   MgCl2   MgSO4     Mg(NO3)2
+{(Fe)2+}   ~   FeCl2   FeSO4     Fe(NO3)2
+{(Al)3+}   ~   AlCl3   Al2(SO4)3 Al(NO3)3
+{(Ca)2+}   ~   Ca(OH)2 CaCl2     Ca(NO3)2
+{(Na)+}    ~   NaOH    Na2CO3    NaCl     NaNO3 Na2SO4
+{(K)+}     ~   KOH     K2CO3     KCl      KNO3
+{(Fe)3+}   ~   FeCl3   Fe2(SO4)3 Fe(NO3)3
+{(Cu)2+}   ~   CuCl2   CuSO4     CuNO3
+{(Ag)+}    ~   AgNO3
+{(Ba)2+}   ~   BaCl2   Ba(NO3)2  Ba(OH)2
+{(NH4)+}   ~   NH4Cl   NH4NO3

@@ -1,0 +1,4 @@
+// 可以出现可以解离的物质
+
+[simple-substance] ~ Mg Al Zn Fe H2 Cu Ag C P S O2
+[metallic-simple-substance] ~ Mg Al Zn Fe Cu Ag

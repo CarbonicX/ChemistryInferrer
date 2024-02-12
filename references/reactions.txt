@@ -1,0 +1,115 @@
+// 不能出现可以解离的物质，除特殊情况外，须一律用离子代替；
+// 例如 NaCl      AgNO3     >   AgCl    NaNO3   是错误的
+//      {(Cl)-}   {(Ag)+}   >   AgCl                是正确的
+//      Ca(OH)2   CO2       >   CaCO3   H2O         是正确的
+// 虽然 {(OH)-} 与 CO2 反应生成 {(CO3)2-} 和 H2O，但是其复分解反应格式在 Loader 中不存在
+//      CaCO3     HCl       >   CaCl2   H2O   CO2   是正确的
+
+// 格式例：C   O2   >   CO2   `ignite`   @combination   @exothermic   @heat-variation
+
+Mg      O2   >   MgO                  `ignite`               @combination     @exothermic   @heat-variation
+S       O2   >   SO2                  `ignite`               @combination     @exothermic   @heat-variation
+C       O2   >   CO2                  `ignite`               @combination     @exothermic   @heat-variation
+C       O2   >   CO                   `ignite`               @combination     @exothermic   @heat-variation
+P       O2   >   P2O5                 `ignite`               @combination     @exothermic   @heat-variation
+Fe      O2   >   Fe3O4                `ignite`               @combination     @exothermic   @heat-variation
+H2      O2   >   H2O                  `ignite`               @combination     @exothermic   @heat-variation
+H2O2         >   H2O      O2          `catalyzer`   `MnO2`   @decomposition   @exothermic   @heat-variation
+HgO          >   Hg       O2          `heat`                 @decomposition
+KClO3        >   KCl      O2          `catalyzer`   `MnO2`   @decomposition
+KMnO4        >   K2MnO4   MnO2   O2   `heat`                 @decomposition
+
+C   CO2   >   CO   `high-temperature`   @combination   @endothermal   @heat-variation
+
+Zn   {(H)+}   >   {(Zn)2+}   H2   @exothermic   @heat-variation
+Mg   {(H)+}   >   {(Mg)2+}   H2   @exothermic   @heat-variation
+Fe   {(H)+}   >   {(Fe)2+}   H2   @exothermic   @heat-variation
+Al   {(H)+}   >   {(Al)3+}   H2   @exothermic   @heat-variation
+
+H2   CuO     >   Cu   H2O   `heat`               @replacement
+H2   Fe2O3   >   Fe   H2O   `high-temperature`   @replacement
+
+C   CuO     >   Cu   CO2   `high-temperature`
+C   Fe2O3   >   Fe   CO2   `high-temperature`
+
+CaCO3           >   CaO       CO2   `high-temperature`   @decomposition
+CaO       H2O   >   Ca(OH)2                              @combination            @exothermic   @heat-variation
+Ca(OH)2   CO2   >   CaCO3     H2O                        @double-decomposition
+NaOH      CO2   >   Na2CO3    H2O                        @double-decomposition
+KOH       CO2   >   K2CO3     H2O                        @double-decomposition
+Ba(OH)2   CO2   >   BaCO3     H2O                        @double-decomposition
+
+Fe3O4   CO   >   Fe   CO2   `heat`
+FeO     CO   >   Fe   CO2   `high-temperature`
+Fe2O3   CO   >   Fe   CO2   `high-temperature`
+CuO     CO   >   Cu   CO2   `high-temperature`
+
+{(OH)-}      {(H)+}   >   H2O                    @neutralization         @exothermic   @heat-variation
+{(CO3)2-}    {(H)+}   >   H2O        CO2         @exothermic             @heat-variation
+{(HCO3)2-}   {(H)+}   >   H2O        CO2         @exothermic             @heat-variation
+CaCO3        HCl      >   CaCl2      H2O   CO2   @double-decomposition   @exothermic   @heat-variation
+CaCO3        H2SO4    >   CaSO4      H2O   CO2   @double-decomposition   @exothermic   @heat-variation
+CaCO3        HNO3     >   Ca(NO3)2   H2O   CO2   @double-decomposition   @exothermic   @heat-variation
+
+Fe2O3     HCl      >   FeCl3       H2O   @double-decomposition
+Fe2O3     H2SO4    >   Fe2(SO4)3   H2O   @double-decomposition
+Fe2O3     HNO3     >   Fe(NO3)3    H2O   @double-decomposition
+Fe(OH)3   HCl      >   FeCl3       H2O   @neutralization   @exothermic   @heat-variation
+Fe(OH)3   H2SO4    >   Fe2(SO4)3   H2O   @neutralization   @exothermic   @heat-variation
+Fe(OH)3   HNO3     >   Fe(NO3)3    H2O   @neutralization   @exothermic   @heat-variation
+
+CuO          HCl      >   CuCl2   H2O   @double-decomposition
+CuO          H2SO4    >   CuSO4   H2O   @double-decomposition
+CuO          HNO3     >   CuNO3   H2O   @double-decomposition
+Cu(OH)2      HCl      >   CuCl2   H2O   @neutralization   @exothermic   @heat-variation
+Cu(OH)2      H2SO4    >   CuSO4   H2O   @neutralization   @exothermic   @heat-variation
+Cu(OH)2      HNO3     >   CuNO3   H2O   @neutralization   @exothermic   @heat-variation
+
+MgO   HCl     >   MgCl2      H2O   @double-decomposition
+MgO   H2SO4   >   MgSO4      H2O   @double-decomposition
+MgO   HNO3    >   Mg(NO3)2   H2O   @double-decomposition
+
+{(Ag)+}    {(Cl)-}     >   AgCl
+{(Ag)+}    {(CO3)2-}   >   Ag2CO3
+{(Ca)2+}   {(CO3)2-}   >   CaCO3
+{(Ba)2+}   {(CO3)2-}   >   BaCO3
+{(Ba)2+}   {(SO4)2-}   >   BaSO4
+{(NH4)+}   {(OH)-}     >   NH3     H2O
+{(Fe)2+}   {(OH)-}     >   Fe(OH)2
+{(Fe)3+}   {(OH)-}     >   Fe(OH)3
+{(Mg)2+}   {(OH)-}     >   Mg(OH)2
+{(Cu)2+}   {(OH)-}     >   Cu(OH)2
+{(Al)3+}   {(OH)-}     >   Al(OH)3
+
+NaHCO3   NaOH   >   Na2CO3   H2O
+
+Cu   {(Ag)+}    >   {(Cu)2+}   Ag
+Fe   {(Cu)2+}   >   {(Fe)2+}   Cu
+Fe   {(Ag)+}    >   {(Fe)2+}   Ag
+Zn   {(Fe)2+}   >   {(Zn)2+}   Fe
+Zn   {(Cu)2+}   >   {(Zn)2+}   Cu
+Zn   {(Ag)+}    >   {(Zn)2+}   Ag
+Al   {(Zn)2+}   >   {(Al)3+}   Zn
+Al   {(Fe)2+}   >   {(Al)3+}   Fe
+Al   {(Cu)2+}   >   {(Al)3+}   Cu
+Al   {(Ag)+}    >   {(Al)3+}   Ag
+Mg   {(Al)3+}   >   {(Mg)2+}   Al
+Mg   {(Zn)2+}   >   {(Mg)2+}   Zn
+Mg   {(Fe)2+}   >   {(Mg)2+}   Fe
+Mg   {(Cu)2+}   >   {(Mg)2+}   Cu
+Mg   {(Ag)+}    >   {(Mg)2+}   Ag
+
+Cu   O2    >   CuO           `heat`
+Al   O2    >   Al2O3
+Fe   O2    >   Fe2O3
+
+// 光合作用
+CO2   >   O2
+// example 题目需要
+O2    >   Cu
+
+Al2O3   HCl     >   AlCl3       H2O   @double-decomposition
+Al2O3   H2SO4   >   Al2(SO4)3   H2O   @double-decomposition
+Al2O3   HNO3    >   Al(NO3)3    H2O   @double-decomposition
+
+Fe(OH)3   >   Fe2O3   H2O   `heat`

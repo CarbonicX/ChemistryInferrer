@@ -1,0 +1,117 @@
+// node N...
+// set N substance SUBSTANCE
+// set N possibles SUBSTANCE...
+// set N possible-ions ION...
+// set N limiters LIMITER...
+// add N...
+// add > N...
+// add N1... > N2... ! `CONDITION` @CATEGORY
+
+node A B C D E F G H I J K L M N O P Q R S T U V W X Y Z TEMP
+set A substance MgO
+set J substance NaOH
+
+set D possible-ions {(Ba)2+} {(SO4)2-} {(Ag)+} {(Cl)-}
+set Z possible-ions {(Ba)2+} {(SO4)2-} {(Ag)+} {(Cl)-}
+set E possible-ions {(Ba)2+} {(SO4)2-} {(Ag)+} {(Cl)-}
+set F possible-ions {(Ba)2+} {(SO4)2-} {(Ag)+} {(Cl)-}
+set M possible-ions {(Al)3+} {(Fe)3+}
+set Z possible-ions {(Cu)2+}
+
+set P limiters [metallic-simple-substance]
+set T limiters [simple-substance]
+set W limiters [simple-substance]
+set X limiters [simple-substance]
+set V limiters [simple-substance]
+
+add P V > L ! `(Null)`
+add O U > TEMP
+add TEMP > U
+add I G > D
+add L G > M
+add R G > S
+
+add V > A
+add A G
+add A > B
+add A > C
+
+add B I
+add B E
+add B J
+
+add C I
+add C D
+
+add I > D
+add D E
+add D Z
+
+add E F
+add E K
+add E S
+
+add J > F
+add K > F
+
+add G > H
+add G P
+add G > U
+add G > T
+add G W
+add G O
+add G K
+
+add H > W
+add W > H
+add H J
+
+add I > J
+add I M
+add I U
+add I S
+add I Z
+
+add J H
+add J S
+add O > J
+add J > K
+
+add K > N
+add K O
+add K > U
+
+add P > L
+
+add P > M
+
+add N > O
+
+add O U
+
+add P > T
+add P V
+
+add S > Q
+add Q > R
+
+add V > R
+add W > R
+
+add T Y
+add W > T
+
+add U > V
+add V > U
+add Y > U
+
+add V W
+add V > X
+
+add W > X
+add W Z
+
+add X > Y
+add Y > X
+
+add Y > Z
